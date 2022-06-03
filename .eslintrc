@@ -1,0 +1,44 @@
+{
+  "parser": "@babel/eslint-parser",
+  "extends": ["airbnb", "prettier"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "globals": {
+    "System": false,
+  },
+  "plugins": ["jest"],
+  "rules": {
+    "camelcase": 0,
+    "max-len": [
+      2,
+      200
+    ],
+    "class-methods-use-this": 0,
+    "react/forbid-prop-types": 0,
+    "react/destructuring-assignment": 0,
+    "jsx-a11y/label-has-associated-control": {
+      "required": {
+        "some": [ "id" ]
+      }
+    },
+    "no-nested-ternary": 0,
+    "react/no-unescaped-entities": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/no-did-update-set-state": false,
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": 0,
+    "jsx-a11y/alt-text": 0,
+    "no-underscore-dangle": ["error", { "allow": ["_id", "_source"] }],
+    "no-unused-vars": [1, {"varsIgnorePattern": "_.*", "argsIgnorePattern": "_.*"}],
+    "spaced-comment": "warn",
+    "react/jsx-wrap-multilines": 0
+  },
+  "settings": {
+  }
+}

@@ -1,0 +1,5 @@
+--ignore-case
+--ignore-directory=is:node_modules
+--ignore-directory=is:.git
+--ignore-directory=is:build
+--ignore-file=is:package-lock.json

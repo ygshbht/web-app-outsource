@@ -1,0 +1,14 @@
+.DS_Store
+node_modules
+build
+npm-debug.log
+lib/
+storybook-static/
+coverage/
+.cache/
+secret.*
+**/.terraform
+public/assets/en.json
+.idea
+.serverless/
+.env
