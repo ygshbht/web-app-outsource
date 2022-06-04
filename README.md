@@ -5,7 +5,8 @@ npm start
 
 ## intro
 
-This project is all about implementing the side menus.
+This project is all about implementing left bar responsive menus in this standard react application.
+
 There are 2 menus:
  - the burger button to switch from the map page to other pages like the marketplace, etc...
  - the translucid left side bar menu that is used to interact with the map
@@ -14,6 +15,13 @@ This project is about replicating the menu UI from here: https://app.nextearth.i
 
 This project is not about implementing any interaction with the map!
 Please create a button on the bottom right of the screen to simulate selecting a land.
+
+## the code
+
+The code of the application is provided and available here: https://github.com/johhnsmmith198/web-app-outsource
+The code already use react-bootstrap.
+If you need to install more node modules please advise me on import before doing so.
+
 
 ## The burger button
 
