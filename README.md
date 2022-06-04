@@ -3,32 +3,44 @@ npm i
 npm start
 ```
 
+## intro
 
 This project is all about implementing the side menus.
 There are 2 menus:
  - the burger button to switch from the map page to other pages like the marketplace, etc...
  - the translucid left side bar menu that is used to interact with the map
 
-This project is not about implementing the interactions, but just the menus themselves.
-NOTE: You can add a button on the bottom right of the screen and any click on that button would simulate selecting a land. (Again this is only about implementing the menus not the interactions)
+This project is not about implementing any interaction with the map!
+Please create a button on the bottom right of the screen to simulate selecting a land.
+
+## The burger button
+
+the burger button display a menu to go to different pages.
+
+When its not expended the menu look like this on mobile (just a burger button)
+![Burger Mobile](./images/side_menu_mobile.png)
+the burger menu is always visible on desktop
+![Burger Desktop](./images/menu_burger_button_mobile.png)
 
 
-## translucid menu:
+It expands like this on mobile, showing a menu to switch to different pages:
+![Burger Menu Mobile](./images/menu_burger_button_mobile.png)
+on desktop
+![Burger Menu Desktop](./images/menu_burger_button_desktop.png)
+
+
+
+## translucid menu (just a burger button)
 
 Selecting a land (OR clicking on your button) would display the number of the selected tile on the side bar
 ![Desktop Side Menu Land Selected](./images/side_menu_desktop_map_land_selected.jpg)
-Clicking the circled red button would expend the translucid menu:
+Clicking the circled red button would expend the translucid menu to display some info:
+NOTE: Please create some dumb infos with Card, Text, Paragraph, Buttons to simulate displaying land information
 ![Desktop Side Menu Land Selected Info Displayed](./images/land_info_display_desktop.png)
 
 Mobile when nothing is selected
 ![Mobile No Selection](./images/side_menu_mobile.png)
+Mobile when a land is selected
 ![Mobile Land Selected](./images/side_menu_mobile_map_land_selected.png)
+Mobile when a land is selected and the info displayed (Clicking on the left sided arrow would close the menu)
 ![Mobile Land Selected Info Displayed](./images/land_info_display_mobile.png)
-
-Clicking on the left sided arrow would close the menu.
-
-## The burger button
-
-the burger button display a menu to go to different pages. It expand like this on mobile:
-![Burger Menu Mobile](./images/menu_burger_button_mobile.png)
-![Burger Menu Desktop](./images/menu_burger_button_desktop.png)
