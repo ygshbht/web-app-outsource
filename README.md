@@ -10,6 +10,8 @@ There are 2 menus:
  - the burger button to switch from the map page to other pages like the marketplace, etc...
  - the translucid left side bar menu that is used to interact with the map
 
+This project is about replicating the menu UI from here: https://app.nextearth.io/buy-land
+
 This project is not about implementing any interaction with the map!
 Please create a button on the bottom right of the screen to simulate selecting a land.
 
@@ -30,7 +32,7 @@ on desktop
 
 
 
-## translucid menu (just a burger button)
+## translucid menu
 
 Selecting a land (OR clicking on your button) would display the number of the selected tile on the side bar
 ![Desktop Side Menu Land Selected](./images/side_menu_desktop_map_land_selected.jpg)
@@ -39,8 +41,8 @@ NOTE: Please create some dumb infos with Card, Text, Paragraph, Buttons to simul
 ![Desktop Side Menu Land Selected Info Displayed](./images/land_info_display_desktop.png)
 
 Mobile when nothing is selected
-![Mobile No Selection](./images/side_menu_mobile.png)
+![Mobile No Selection](./images/side_menu_mobile.p:wng)
 Mobile when a land is selected
 ![Mobile Land Selected](./images/side_menu_mobile_map_land_selected.png)
-Mobile when a land is selected and the info displayed (Clicking on the left sided arrow would close the menu)
+Mobile when a land is selected and the info displayed (to display infos, you have to click on the "eye" icon)
 ![Mobile Land Selected Info Displayed](./images/land_info_display_mobile.png)
