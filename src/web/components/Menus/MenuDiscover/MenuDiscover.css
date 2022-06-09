@@ -1,10 +1,79 @@
 .geocoder-container {
-  /* position: absolute; */
-  z-index: 100;
-  /* left: 50%; */
-  /* margin-left: -25%; */
-  /* top: 10px; */
+	/* position: absolute; */
+	z-index: 100;
+	/* left: 50%; */
+	/* margin-left: -25%; */
+	/* top: 10px; */
 }
 .mapboxgl-ctrl-geocoder {
-  min-width: 100%;
+	min-width: 100%;
+}
+
+#content .row {
+	margin: 10px auto;
+}
+#content {
+	max-width: 99999px;
+}
+
+#menu-discover-container .col {
+	padding-left: 0px;
+	padding-right: 0;
+}
+
+#menu-discover-container .text-secondary {
+	color: #ab90f2 !important;
+}
+
+.tiles-info-card-top {
+	background: linear-gradient(
+			160.71deg,
+			rgba(81, 238, 144, 0.2) 0.39%,
+			rgba(17, 17, 17, 0) 87.04%
+		),
+		radial-gradient(100% 100% at 100% 0%, #6100ff 0%, rgba(17, 17, 17, 0) 100%),
+		#874be8;
+}
+
+.tiles-info-card-top,
+.tiles-info-card-bottom {
+	padding: 24px;
+}
+
+.tiles-selected-buttons button:hover {
+	opacity: 0.75;
+}
+
+.text-primary {
+	background: radial-gradient(
+		100% 683.38% at 100% -1.52%,
+		#aa20eb 0%,
+		#ff6b00 100%
+	);
+	color: transparent !important;
+	background-clip: "text";
+	-webkit-background-clip: text !important;
+}
+#menu-discover-container {
+	padding: 8px;
+}
+#menu-discover-container.expanded {
+	padding: 24px;
+}
+
+@media screen and (max-width: 850px) {
+	#content {
+		height: calc(100vh - 38px);
+		z-index: 3;
+		position: fixed;
+		left: 0;
+		top: 38px;
+	}
+	#menu-discover-container.expanded {
+		padding: 14px;
+	}
+	.tiles-info-card-top,
+	.tiles-info-card-bottom {
+		padding: 8px;
+	}
 }

@@ -1,0 +1,20 @@
+#marketplace-menu-container {
+	width: 350px;
+	height: 100%;
+	z-index: 3;
+	margin: 0;
+}
+
+/* @media screen and (max-width: 850px) {
+	#marketplace-menu-container {
+		top: 38px;
+		left: 0;
+	}
+} */
+
+@media screen and (max-width: 650px) {
+	#marketplace-menu-container {
+		width: 100%;
+		max-width: 100%;
+	}
+}

@@ -12,3 +12,4 @@ public/assets/en.json
 .idea
 .serverless/
 .env
+.vercel
