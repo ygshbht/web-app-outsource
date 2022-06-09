@@ -54,12 +54,6 @@
 	background-clip: "text";
 	-webkit-background-clip: text !important;
 }
-#menu-discover-container {
-	padding: 8px;
-}
-#menu-discover-container.expanded {
-	padding: 24px;
-}
 
 @media screen and (max-width: 850px) {
 	#content {
