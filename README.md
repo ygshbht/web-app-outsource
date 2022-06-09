@@ -44,6 +44,7 @@ You must start seeing attributes like this `class="MenuDiscover_normal__iDlHv Me
 ![html](./images/step2/2g-css_module_naming_it_works.png)
 
 We need to migrate the entire application to css modules
+This commit give you an idea of what I explained in the doc before: https://github.com/johhnsmmith198/web-app-outsource/commit/540061b6f6169370dde07e44883aedec9c85abe3
 
 NOTE: 
 In case you have globals. You can prefix the class with `:globals`.
