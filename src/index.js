@@ -7,4 +7,7 @@ import "web/index.css";
 // inside the class app
 const routes = renderRoutes();
 
-render(<React.StrictMode>{renderRoutes(routes)}</React.StrictMode>, document.getElementById("root"));
+render(
+	<React.StrictMode>{renderRoutes(routes)}</React.StrictMode>,
+	document.getElementById("root")
+);
