@@ -3,54 +3,57 @@ npm i
 npm start
 ```
 
-## intro
+## step2
 
-This project is all about implementing left bar responsive menus in this standard react application.
-
-There are 2 menus:
- - the burger button to switch from the map page to other pages like the marketplace, etc...
- - the translucid left side bar menu that is used to interact with the map
-
-This project is about replicating the menu UI from here: https://app.nextearth.io/buy-land
-
-This project is not about implementing any interaction with the map!
-Please create a button on the bottom right of the screen to simulate selecting a land.
-
-## the code
-
-The code of the application is provided and available here: https://github.com/johhnsmmith198/web-app-outsource
-The code already use react-bootstrap.
-If you need to install more node modules please advise me on import before doing so.
+- warnings
+- css modules
 
 
-## The burger button
+## warnings
 
-the burger button display a menu to go to different pages.
-
-When its not expended the menu look like this on mobile (just a burger button)
-![Burger Mobile](./images/side_menu_mobile.png)
-the burger menu is always visible on desktop
-![Burger Desktop](./images/menu_burger_button_mobile.png)
+Let try to remove as many warnings as possible.
+This is going to reduce the number of unused code and will ease the transition to CSS Modules
+![Warnings](./images/step2/1-warnings.png)
 
 
-It expands like this on mobile, showing a menu to switch to different pages:
-![Burger Menu Mobile](./images/menu_burger_button_mobile.png)
-on desktop
-![Burger Menu Desktop](./images/menu_burger_button_desktop.png)
+## css modules
+
+Basically a file named Component.module.css is going to be treated as a css modules
+As you can see on the doc you can have another-stylesheet and css modules living together at the same time 
+![documentation](./images/step2/2a-use_css_modules_instead_of_direct_css.png)
+
+CSS Modules does not work with css id targeting (only classes)
+So you will transition those 2 css rules
+![no_id_target](./images/step2/2b-css_modules_does_not_work_with_id.png)
+Into class rules on a file named Component.module.css
+![class_rules](./images/step2/2c-create_classnames.png)
+
+You can import both the normal css and the css module to transition step by step, everything to css modules
+```
+import styles from './MenuDiscover.module.css';
+```
+will create a variable named `styles` that will be used later on the `className` attribute
+![import](./images/step2/2f-normal_css_and_css_module_can_lives_together_to_transition_easily.png)
+
+The `styles` variable is used to fill the `className` attribute
+NOTE: This can create `null` classnames when we do conditional classnames. We will ignore that for now
+![css_module_usage](./images/step2/2e-className_use_the_styles_variable.png)
+
+The change should be reflected in the html.
+You must start seeing attributes like this `class="MenuDiscover_normal__iDlHv MenuDiscover_expanded__1X_n- container"`
+![html](./images/step2/2g-css_module_naming_it_works.png)
+
+We need to migrate the entire application to css modules
+This commit give you an idea of what I explained in the doc before: https://github.com/johhnsmmith198/web-app-outsource/commit/540061b6f6169370dde07e44883aedec9c85abe3
+
+NOTE: 
+In case you have globals. You can prefix the class with `:globals`.
+Those globals should be defined at the to level and imported via absolute path
+example: `import globalStyles from 'web/globals.module.css'`
+![globals](./images/step2/2h-globals_doc.png)
+
+## map provider
+
+will come next (in a step3, depending on how we go with the css refactoring). lets focus on css modules first.
 
 
-
-## translucid menu
-
-Selecting a land (OR clicking on your button) would display the number of the selected tile on the side bar
-![Desktop Side Menu Land Selected](./images/side_menu_desktop_map_land_selected.jpg)
-Clicking the circled red button would expend the translucid menu to display some info:
-NOTE: Please create some dumb infos with Card, Text, Paragraph, Buttons to simulate displaying land information
-![Desktop Side Menu Land Selected Info Displayed](./images/land_info_display_desktop.png)
-
-Mobile when nothing is selected
-![Mobile No Selection](./images/side_menu_mobile.p:wng)
-Mobile when a land is selected
-![Mobile Land Selected](./images/side_menu_mobile_map_land_selected.png)
-Mobile when a land is selected and the info displayed (to display infos, you have to click on the "eye" icon)
-![Mobile Land Selected Info Displayed](./images/land_info_display_mobile.png)

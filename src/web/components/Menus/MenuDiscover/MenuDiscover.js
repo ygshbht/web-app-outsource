@@ -12,6 +12,8 @@ import {
 } from "react-bootstrap";
 import { MapContext } from "web/MapProvider";
 import "./MenuDiscover.css";
+import styles from "./MenuDiscover.module.css";
+
 import Form from "react-bootstrap/Form";
 import {
 	InfoCircle,
@@ -53,7 +55,7 @@ const MenuDiscover = (_) => {
 	return (
 		<Container
 			id="menu-discover-container"
-			class={expanded ? "expanded" : ""}
+			className={`${styles.normal} ${expanded ? styles.expanded : null}`}
 			style={{
 				backgroundColor: "rgba(36, 0, 81, 0.75)",
 				maxWidth: "min(494px, 100vw)",
