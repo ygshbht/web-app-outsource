@@ -5,33 +5,33 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import styles from "./TileInfo.module.css";
 // TODO get the selected info via props
 const TileInfo = ({ selectedTile, show }) => {
-	return show ? (
-		<>
-			<Card className={styles["tileinfo"]}>
-				<Card.Body>
-					<Row>
-						<Col>{selectedTile}</Col>
-						<Col>
-							<button
-								type="button"
-								className="close"
-								aria-label="Close"
-								onClick={unSelect}
-							>
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</Col>
-					</Row>
-					<Row>
-						<Col>
-							<Card>
-								<Card.Body>This is some text within a card body.</Card.Body>
-							</Card>
-						</Col>
-					</Row>
-				</Card.Body>
-			</Card>
-		</>
-	) : null;
+  return show ? (
+    <>
+      <Card className={styles["tileinfo"]}>
+        <Card.Body>
+          <Row>
+            <Col>{selectedTile}</Col>
+            <Col>
+              <button
+                type="button"
+                className="close"
+                aria-label="Close"
+                onClick={unSelect}
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Card>
+                <Card.Body>This is some text within a card body.</Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Card.Body>
+      </Card>
+    </>
+  ) : null;
 };
 export default TileInfo;

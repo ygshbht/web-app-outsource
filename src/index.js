@@ -8,6 +8,6 @@ import "web/index.css";
 const routes = renderRoutes();
 
 render(
-	<React.StrictMode>{renderRoutes(routes)}</React.StrictMode>,
-	document.getElementById("root")
+  <React.StrictMode>{renderRoutes(routes)}</React.StrictMode>,
+  document.getElementById("root")
 );

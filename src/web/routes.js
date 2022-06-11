@@ -9,40 +9,40 @@ import Layout from "./components/Layout/Layout";
 // import Layout from "./components/Layout";
 
 const renderRoutes = () => (
-	<Router>
-		<Home path="/" key="home" />
-		<Home path="/map" key="map" />
-		<MarketPlace path="/marketplace" key="marketplace" />
-	</Router>
+  <Router>
+    <Home path="/" key="home" />
+    <Home path="/map" key="map" />
+    <MarketPlace path="/marketplace" key="marketplace" />
+  </Router>
 );
 
 const MarketPlace = () => {
-	const [showMarketplace, setShowMarketPlace] = useState(() => {
-		return window.innerWidth > 850 ? true : false;
-	});
+  const [showMarketplace, setShowMarketPlace] = useState(() => {
+    return window.innerWidth > 850 ? true : false;
+  });
 
-	return (
-		<Layout
-			propsForMobileMenuSeclector={{
-				settings: (
-					<Sliders2
-						onClick={() => setShowMarketPlace((e) => !e)}
-						style={{ color: "white", cursor: "pointer" }}
-					/>
-				),
-			}}
-		>
-			{showMarketplace && <MarketplaceMenu />}
-		</Layout>
-	);
+  return (
+    <Layout
+      propsForMobileMenuSeclector={{
+        settings: (
+          <Sliders2
+            onClick={() => setShowMarketPlace((e) => !e)}
+            style={{ color: "white", cursor: "pointer" }}
+          />
+        ),
+      }}
+    >
+      {showMarketplace && <MarketplaceMenu />}
+    </Layout>
+  );
 };
 
 function Home() {
-	return (
-		<Layout>
-			<MenuDiscover />
-		</Layout>
-	);
+  return (
+    <Layout>
+      <MenuDiscover />
+    </Layout>
+  );
 }
 
 export default renderRoutes;
