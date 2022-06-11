@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { List } from "react-bootstrap-icons";
 import "./MenuSelector.css";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Menu as MenuList } from "./MenuSelector";
 import { useLocation } from "@reach/router";
 import routes from "web/routeList";
@@ -30,7 +30,6 @@ function Menu({ setShowExpanedMenu, settings: Settings }) {
 		}
 	}
 	const Icon = activeRoute.icon ?? <div></div>;
-	console.log({ Settings, activeRoute });
 	return (
 		<Container
 			style={{

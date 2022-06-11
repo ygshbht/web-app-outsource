@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import mapboxgl from "web/MapboxGlWrapper";
-import { Container, Collapse, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import { MapContext } from "web/MapProvider";
 import "./MarketplaceMenu.css";
 import Form from "react-bootstrap/Form";
@@ -16,16 +16,11 @@ import {
 	Grid,
 	Water,
 	Building,
-	ArrowBarLeft,
-	Eye,
-	Search,
-	Bullseye,
 	ArrowsAngleContract,
 } from "react-bootstrap-icons";
 
 const MenuDiscover = (_) => {
-	const { map, zoom } = useContext(MapContext);
-	const [expanded, setExpanded] = useState(false);
+	const { map } = useContext(MapContext);
 	const [showLandType, setShowLandType] = useState(false);
 	const [showTileCount, setShowTileCount] = useState(false);
 	const [showPrice, setShowPrice] = useState(false);
@@ -188,21 +183,6 @@ const MenuDiscover = (_) => {
 		</Container>
 	);
 };
-
-function IconButton({ icon: Icon }) {
-	return (
-		<div
-			style={{
-				width: 500,
-				height: "100vh",
-				background: "white",
-				borderRadius: "5px",
-				display: "grid",
-				placeItems: "center",
-			}}
-		></div>
-	);
-}
 
 function AppAccordion({ open, setOpen, icon, title, children }) {
 	return (

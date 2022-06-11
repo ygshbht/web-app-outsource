@@ -1,32 +1,18 @@
 import React, { useContext, useState } from "react";
-import {
-	Map,
-	Moon,
-	Ethernet,
-	CurrencyBitcoin,
-	Gift,
-	Hammer,
-	EnvelopePaper,
-	Truck,
-	BarChartLine,
-	BoxArrowInRight,
-	ArrowsAngleExpand,
-} from "react-bootstrap-icons";
+import { ArrowsAngleExpand } from "react-bootstrap-icons";
 import "./MenuSelector.css";
-import { Container, Row, Col, Card } from "react-bootstrap";
-import Collapse from "react-bootstrap/Collapse";
+import { Container, Row, Col } from "react-bootstrap";
 import SlideIn from "web/components/Drawer";
 import { Link } from "@reach/router";
 import { useLocation } from "@reach/router";
 import routes from "web/routeList";
-import MenuSelectorMobile from "./MenuSelectorMobile";
 
 const ActiveElemContext = React.createContext(null);
 
 const MenuSelector = ({ settings }) => {
 	const [activeElem, setActiveElem] = useState(null);
 	const [showExandedMenu, setShowExpanedMenu] = useState(false);
-	console.log(settings);
+
 	return (
 		<ActiveElemContext.Provider
 			value={{ showExandedMenu, activeElem, setActiveElem, setShowExpanedMenu }}
@@ -192,7 +178,6 @@ function LinkButton({ to, children, icon: Icon, toggler }) {
 					border: "0",
 					color: "white",
 					fontWeight: "bold",
-					margin: "5px 0 ",
 					display: "flex",
 					gap: 15,
 					margin: !expanded ? "7px auto" : "7px 0",

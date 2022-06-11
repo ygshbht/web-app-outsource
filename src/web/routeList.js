@@ -9,7 +9,6 @@ import {
 	Truck,
 	BarChartLine,
 	BoxArrowInRight,
-	ArrowsAngleExpand,
 } from "react-bootstrap-icons";
 
 const routes = {

@@ -7,7 +7,6 @@ import {
 	Container,
 	Row,
 	Col,
-	Card,
 	Button,
 } from "react-bootstrap";
 import { MapContext } from "web/MapProvider";
@@ -26,11 +25,9 @@ import {
 	CurrencyDollar,
 	Bullseye,
 } from "react-bootstrap-icons";
-import routes from "web/routeList";
-import { center } from "@turf/turf";
 
 const MenuDiscover = (_) => {
-	const { map, zoom } = useContext(MapContext);
+	const { map } = useContext(MapContext);
 	const [expanded, setExpanded] = useState(false);
 	const geocoder = new MapboxGeocoder({
 		accessToken: mapboxgl.accessToken,
@@ -216,7 +213,7 @@ function TilesInfo() {
 					}}
 				>
 					<div style={{ fontWeight: "bold" }}>Tiles Selected: -/1000</div>
-					<a style={{ textDecoration: "underline", color: "white" }} href="#">
+					<a style={{ textDecoration: "underline", color: "white" }} href="/">
 						Clear selection
 					</a>
 				</div>
