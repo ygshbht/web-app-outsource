@@ -1,0 +1,27 @@
+.main-container {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	transform: translateX(-100%);
+	top: 0;
+	left: 0;
+	z-index: 99999999999999999999;
+}
+
+.content-container {
+	position: relative;
+	z-index: 2;
+	display: inline-flex;
+	transform: translateX(-100%);
+}
+
+.black-bg {
+	background: rgba(0, 0, 0, 0.2);
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	opacity: 0;
+}

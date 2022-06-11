@@ -10,7 +10,7 @@ import {
 	Button,
 } from "react-bootstrap";
 import { MapContext } from "web/MapProvider";
-import "./MenuDiscover.css";
+// import "./MenuDiscover.css";
 import styles from "./MenuDiscover.module.css";
 
 import Form from "react-bootstrap/Form";
@@ -51,22 +51,18 @@ const MenuDiscover = (_) => {
 
 	return (
 		<Container
-			id="menu-discover-container"
-			className={`${styles.normal} ${expanded ? styles.expanded : null}`}
-			style={{
-				backgroundColor: "rgba(36, 0, 81, 0.75)",
-				maxWidth: "min(494px, 100vw)",
-				height: "100%",
-			}}
+			className={`${styles["menu-discover-container"]} ${styles.normal} ${
+				expanded ? styles.expanded : null
+			}`}
 		>
 			<Row>
 				<Col>
-					<div className="geocoder-container" />
+					<div className={styles["geocoder-container"]} />
 				</Col>
 			</Row>
 			<Row>
 				<Col>
-					<div style={{ display: "flex", gap: 3, alignItems: "center" }}>
+					<div className="d-flex align-items-center" style={{ gap: 3 }}>
 						{expanded && (
 							<Form.Control type="text" placeholder="Search"></Form.Control>
 						)}
@@ -83,22 +79,17 @@ const MenuDiscover = (_) => {
 				<Col>
 					{expanded ? (
 						<div
+							className="d-flex justify-content-between"
 							style={{
-								display: "Flex",
 								gap: "15px",
-								justifyContent: "space-between",
 							}}
 						>
-							<div style={{ display: "flex" }}>
-								<label style={{ color: "white" }} className="form-label">
-									Lng:
-								</label>
+							<div className="d-flex">
+								<label className="form-label text-white">Lng:</label>
 								<Form.Control type="text" placeholder="Search"></Form.Control>
 							</div>
-							<div style={{ display: "flex" }}>
-								<label style={{ color: "white" }} className="form-label">
-									Lat:
-								</label>
+							<div className="d-flex">
+								<label className="form-label text-white">Lat:</label>
 								<Form.Control type="text" placeholder="Search"></Form.Control>
 							</div>
 						</div>
@@ -124,12 +115,6 @@ const MenuDiscover = (_) => {
 							<option>Navigation Light</option>
 						</Form.Control>
 					) : (
-						// <select
-						// 	className="form-select p-2"
-						// 	style={{ borderRadius: "0.25rem", width: "100%" }}
-						// >
-
-						// </select>
 						<IconButton
 							onClick={() => setExpanded(true)}
 							icon={Eye}
@@ -149,11 +134,9 @@ const MenuDiscover = (_) => {
 					<TilesInfo />
 				) : (
 					<div
+						className="font-weight-bold text-white text-uppercase"
 						style={{
 							marginTop: 10,
-							fontWeight: "bold",
-							color: "white",
-							textTransform: "uppercase",
 							writingMode: "vertical-rl",
 						}}
 					>
@@ -167,7 +150,7 @@ const MenuDiscover = (_) => {
 
 function AppRow({ children }) {
 	return (
-		<div style={{ display: "flex", alignItems: "start", gap: 10 }}>
+		<div className="d-flex align-items-start" style={{ gap: 10 }}>
 			<div
 				className="d-flex justify-content-center pt-1"
 				style={{ minWidth: "7%" }}
@@ -181,19 +164,7 @@ function AppRow({ children }) {
 
 function IconButton({ icon: Icon, onClick }) {
 	return (
-		<div
-			onClick={onClick}
-			style={{
-				width: 24,
-				height: 25,
-				background: "white",
-				borderRadius: "5px",
-				display: "grid",
-				padding: 0,
-				cursor: "pointer",
-				placeItems: "center",
-			}}
-		>
+		<div onClick={onClick} className={styles["icon-button"]}>
 			<Icon></Icon>
 		</div>
 	);
@@ -201,28 +172,28 @@ function IconButton({ icon: Icon, onClick }) {
 
 function TilesInfo() {
 	return (
-		<Col className="tiles-info" style={{ color: "white" }}>
+		<Col className={styles["tiles-info"]} style={{ color: "white" }}>
 			<div style={{ color: "white" }}>
 				<div
+					className="text-text-uppercase d-flex justify-content-between text-white"
 					style={{
-						textTransform: "uppercase",
-						display: "flex",
-						justifyContent: "space-between",
-						color: "white",
 						marginTop: "15px",
 					}}
 				>
-					<div style={{ fontWeight: "bold" }}>Tiles Selected: -/1000</div>
-					<a style={{ textDecoration: "underline", color: "white" }} href="/">
+					<div className="font-weight-bold">Tiles Selected: -/1000</div>
+					<a
+						className="text-white"
+						style={{ textDecoration: "underline" }}
+						href="/"
+					>
 						Clear selection
 					</a>
 				</div>
 			</div>
 			<div>
 				<div
+					className="uppercase font-weight-bold"
 					style={{
-						textTransform: "uppercase",
-						fontWeight: "bold",
 						margin: "10px 0",
 						color: "rgb(44, 206, 143)",
 					}}
@@ -231,7 +202,7 @@ function TilesInfo() {
 				</div>
 			</div>
 			<div>
-				<div className="tiles-info-card-top">
+				<div className={styles["tiles-info-card-top"]}>
 					<div className="font-weight-bold d-flex align-items-center justify-content-between">
 						<p className="m-0" style={{ fontSize: "1.5rem" }}>
 							{" "}
@@ -239,16 +210,16 @@ function TilesInfo() {
 						</p>
 						<Bullseye />
 					</div>
-					<div style={{ gap: 10 }} className="font-weight-bold d-flex ">
-						<div className="d-flex" style={{ alignItems: "center", gap: 5 }}>
+					<div className={styles["area-geography-info"]}>
+						<div>
 							<Building />
 							<span>644</span>
 						</div>
-						<div className="d-flex" style={{ alignItems: "center", gap: 5 }}>
+						<div>
 							<CaretUpFill />
 							<span>644</span>
 						</div>
-						<div className="d-flex" style={{ alignItems: "center", gap: 5 }}>
+						<div>
 							<Water />
 							<span>0</span>
 						</div>
@@ -283,10 +254,7 @@ function TilesInfo() {
 							<CurrencyDollar style={{ fontSize: "1.5rem" }} />
 						</div>
 						<div>
-							<div
-								className="d-flex align-items-center"
-								style={{ fontWeight: "bold" }}
-							>
+							<div className="d-flex font-font-weight-bold align-items-center">
 								<span style={{ fontSize: "1.5rem" }}>
 									<span>Total</span>
 
@@ -320,10 +288,7 @@ function TilesInfo() {
 					<AppRow>
 						<InfoCircle />
 
-						<div
-							style={{ flexDirection: "column" }}
-							className="d-flex flex-flex-column"
-						>
+						<div className="d-flex flex-column ">
 							<div className="d-flex">
 								<div className="p-0 md-col-4 col-6 text-secondary">
 									{" "}
@@ -359,7 +324,7 @@ function TilesInfo() {
 					</AppRow>
 				</div>
 				<div
-					className="tiles-info-card-bottom"
+					className={styles["tiles-info-card-bottom"]}
 					style={{ background: "#240051" }}
 				>
 					<div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -374,16 +339,7 @@ function TilesInfo() {
 						<div className="p-0 col-3">0.1 USDT</div>
 						<div className="p-0 col-3"></div>
 					</div>
-					<div
-						style={{
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "stretch",
-							gap: 10,
-							marginTop: 20,
-						}}
-						className="tiles-selected-buttons"
-					>
+					<div className={styles["tiles-selected-buttons"]}>
 						<Button
 							style={{
 								background:

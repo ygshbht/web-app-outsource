@@ -1,12 +1,13 @@
 import React, { useContext, useState } from "react";
 import { ArrowsAngleExpand } from "react-bootstrap-icons";
-import "./MenuSelector.css";
+// import "./MenuSelector.css";
 import { Container, Row, Col } from "react-bootstrap";
-import SlideIn from "web/components/Drawer";
+// import SlideIn from "web/components/Drawer";
 import { Link } from "@reach/router";
 import { useLocation } from "@reach/router";
 import routes from "web/routeList";
-
+import styles from "./MenuSelector.module.css";
+import Drawer from "web/components/Drawer/Drawer";
 const ActiveElemContext = React.createContext(null);
 
 const MenuSelector = ({ settings }) => {
@@ -17,26 +18,15 @@ const MenuSelector = ({ settings }) => {
 		<ActiveElemContext.Provider
 			value={{ showExandedMenu, activeElem, setActiveElem, setShowExpanedMenu }}
 		>
-			<SlideIn onClose={() => setShowExpanedMenu(false)} open={showExandedMenu}>
+			<Drawer onClose={() => setShowExpanedMenu(false)} open={showExandedMenu}>
 				<div
-					style={{
-						position: "relative",
-						zIndex: 999999999999,
-						display: "inline-block",
-						height: "100vh",
-						width: "auto",
-					}}
-					id="expanded-sidebar-menu"
-					className="expanded-menu open"
+					className={`expanded-menu open ${styles["expanded-sidebar-menu"]}`}
 				>
 					<Menu setShowExpanedMenu={setShowExpanedMenu} expanded={true} />
 				</div>
-			</SlideIn>
-			{/* <MenuSelectorMobile
-				settings={settings}
-				setShowExpanedMenu={setShowExpanedMenu}
-			/> */}
-			<div id="menu-selector-desktop">
+			</Drawer>
+
+			<div className={styles["menu-selector-desktop"]}>
 				<Menu expanded={false} setShowExpanedMenu={setShowExpanedMenu} />
 			</div>
 		</ActiveElemContext.Provider>
@@ -49,23 +39,14 @@ export function Menu({ expanded, setShowExpanedMenu }) {
 			value={{ ...useContext(ActiveElemContext), expanded }}
 		>
 			<Container
-				style={{
-					overflow: "visible",
-					display: "flex",
-					height: "100vh",
-					justifyContent: "space-between",
-					flexDirection: "column",
-					padding: expanded ? `30px 50px 30px 0px` : `30px 0`,
-					maxWidth: "90vw",
-					minWidth: "48px",
-				}}
+				className={`${styles["sideBar"]} ${expanded ? styles["expanded"] : ""}`}
 			>
 				<div>
 					<Row>
 						<Col>
 							<div
 								onClick={() => setShowExpanedMenu((e) => !e)}
-								className="toggle-menu"
+								className={styles["toggle-menu"]}
 							>
 								<LinkButton toggler icon={ArrowsAngleExpand}>
 									Toggle Menu
@@ -172,29 +153,12 @@ function LinkButton({ to, children, icon: Icon, toggler }) {
 	return (
 		<Link to={toggler ? "" : to ?? "/"}>
 			<button
-				style={{
-					textAlign: "start",
-					backgroundColor: "transparent",
-					border: "0",
-					color: "white",
-					fontWeight: "bold",
-					display: "flex",
-					gap: 15,
-					margin: !expanded ? "7px auto" : "7px 0",
-					justifyContent: "start",
-				}}
-				className="link-button"
+				className={`${styles["link-button"]} ${
+					expanded ? styles["expanded"] : ""
+				}`}
 			>
 				<div
-					style={{
-						borderRadius: "100%",
-						display: "inline-grid",
-						placeItems: "center",
-						width: 25,
-						height: 25,
-						flexShrink: 0,
-					}}
-					className={`icon ${isActive ? "active" : ""}`}
+					className={`${styles["icon"]} ${isActive ? styles["active"] : ""}`}
 				>
 					{Icon && <Icon size={15}></Icon>}
 				</div>

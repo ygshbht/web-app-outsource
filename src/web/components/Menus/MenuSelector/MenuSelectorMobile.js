@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import { List } from "react-bootstrap-icons";
-import "./MenuSelector.css";
+// import "./MenuSelector.css";
 import { Container } from "react-bootstrap";
 import { Menu as MenuList } from "./MenuSelector";
 import { useLocation } from "@reach/router";
 import routes from "web/routeList";
-import Drawer from "web/components/Drawer";
+// import Drawer from "web/components/Drawer";
 
+import styles from "./MenuSelector.module.css";
+import Drawer from "web/components/Drawer/Drawer";
 const MenuSelectorMobile = ({ settings }) => {
 	const [showExpanedmenu, setShowExpanedMenu] = useState(false);
 	return (
-		<div id="menu-selector-mobile">
+		<div id="menu-selector-mobile" className={styles["menu-selector-mobile"]}>
 			<Menu settings={settings} setShowExpanedMenu={setShowExpanedMenu} />
 			<Drawer onClose={() => setShowExpanedMenu(false)} open={showExpanedmenu}>
 				<div style={{ background: "rgb(36, 0, 81)" }}>

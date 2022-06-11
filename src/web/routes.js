@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 // TODO migrate from REACH ROUTER TO REACT ROUTER WTF!
 import { Router } from "@reach/router";
-import MapProvider from "web/MapProvider";
 import MenuDiscover from "web/components/Menus/MenuDiscover/MenuDiscover";
 import MarketplaceMenu from "web/components/Menus/MarketplaceMenu/MarketplaceMenu";
 // import Header from "web/components/Header";
 import { Sliders2 } from "react-bootstrap-icons";
-import Layout from "./components/Layout";
+import Layout from "./components/Layout/Layout";
+// import Layout from "./components/Layout";
 
 const renderRoutes = () => (
 	<Router>
@@ -32,10 +32,7 @@ const MarketPlace = () => {
 				),
 			}}
 		>
-			<div className="map-container-big">
-				<div id="main-map" className="map" />
-			</div>
-			<MapProvider>{showMarketplace && <MarketplaceMenu />}</MapProvider>
+			{showMarketplace && <MarketplaceMenu />}
 		</Layout>
 	);
 };
@@ -43,16 +40,7 @@ const MarketPlace = () => {
 function Home() {
 	return (
 		<Layout>
-			<div className="map-container-big">
-				<div id="main-map" className="map" />
-			</div>
-			<MapProvider>
-				<div className="bars">
-					<div style={{}} id="content">
-						<MenuDiscover />
-					</div>
-				</div>
-			</MapProvider>
+			<MenuDiscover />
 		</Layout>
 	);
 }
