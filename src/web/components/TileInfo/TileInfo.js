@@ -7,7 +7,7 @@ import styles from "./TileInfo.module.css";
 const TileInfo = ({ selectedTile, show }) => {
   return show ? (
     <>
-      <Card className={styles["tileinfo"]}>
+      <Card className={styles.tileinfo}>
         <Card.Body>
           <Row>
             <Col>{selectedTile}</Col>

@@ -56,8 +56,8 @@ const MenuDiscover = (_) => {
   }
 
   return (
-    <Container className={styles["marketplace-menu-container"]}>
-      <div className={styles["header"]}>
+    <Container className={styles.marketplaceMenuContainer}>
+      <div className={styles.header}>
         <div
           style={{
             display: "flex",
@@ -170,17 +170,17 @@ const MenuDiscover = (_) => {
         </div>
       </AppAccordion>
 
-      <Button className={styles["apply-btn"]}>Apply</Button>
+      <Button className={styles.applyBtn}>Apply</Button>
     </Container>
   );
 };
 
 function AppAccordion({ open, setOpen, icon, title, children }) {
   return (
-    <div className={styles["app-accordion"]}>
+    <div className={styles.appAccordion}>
       <Button
         onClick={() => setOpen((e) => !e)}
-        className={styles["app-accordion-toggle"]}
+        className={styles.appAccordionToggle}
       >
         <span style={{ display: "flex", gap: 5, alignItems: "center" }}>
           {icon}

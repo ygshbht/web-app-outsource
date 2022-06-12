@@ -4,7 +4,7 @@
   --purple: #240051;
 }
 
-.menu-selector-mobile {
+.menuSelectorMobile {
   position: sticky;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
   width: 100%;
 }
 
-.menu-selector-desktop {
+.menuSelectorDesktop {
   z-index: 999999999;
   position: sticky;
   left: 0;
@@ -32,16 +32,16 @@
 .icon.active {
   background-color: var(--primary);
 }
-.toggle-menu .icon.active {
+.toggleMenu .icon.active {
   background-color: transparent;
 }
 
-.toggle-menu * {
+.toggleMenu * {
   background-color: transparent;
   color: var(--primary);
 }
 
-.link-button {
+.linkButton {
   text-align: start;
   background-color: transparent;
   border: 0;
@@ -52,14 +52,14 @@
   margin: 7px auto;
   justify-content: flex-start;
 }
-.link-button.expanded {
+.linkButton.expanded {
   margin: 7px 0;
 }
-.link-button:hover .icon {
+.linkButton:hover .icon {
   background-color: var(--primary-light);
 }
 
-.expanded-sidebar-menu {
+.expandedSidebarMenu {
   background-color: var(--purple);
   position: relative;
   z-index: 999999999999;
@@ -69,18 +69,18 @@
 }
 
 @media screen and (max-width: 850px) {
-  .menu-selector-desktop {
+  .menuSelectorDesktop {
     display: none;
   }
-  .menu-selector-mobile {
+  .menuSelectorMobile {
     display: block;
   }
 }
 @media screen and (min-width: 851px) {
-  .menu-selector-desktop {
+  .menuSelectorDesktop {
     display: block;
   }
-  .menu-selector-mobile {
+  .menuSelectorMobile {
     display: none;
   }
 }

@@ -20,8 +20,8 @@ export default function Drawer({ open, children, onClose }) {
     }
   }, [open]);
   return (
-    <div ref={elemRef} className={styles["main-container"]}>
-      <div ref={containerRef} className={styles["content-container"]}>
+    <div ref={elemRef} className={styles.mainContainer}>
+      <div ref={containerRef} className={styles.contentContainer}>
         {children}
         <div
           onClick={onClose}
@@ -33,7 +33,7 @@ export default function Drawer({ open, children, onClose }) {
       <div
         ref={backgroundRef}
         onClick={onClose}
-        className={styles["black-bg"]}
+        className={styles.blackBg}
       ></div>
     </div>
   );

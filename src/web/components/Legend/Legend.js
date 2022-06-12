@@ -18,7 +18,7 @@ const Legend = (props) => {
   }, [map, zoom]);
 
   return show ? (
-    <div id="state-legend" className={styles["legend"]}>
+    <div id="state-legend" className={styles.legend}>
       <h4>Population</h4>
     </div>
   ) : null;

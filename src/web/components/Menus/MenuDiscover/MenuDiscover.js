@@ -51,13 +51,13 @@ const MenuDiscover = (_) => {
 
   return (
     <Container
-      className={`${styles["menu-discover-container"]} ${styles.normal} ${
+      className={`${styles.menuDiscoverContainer} ${styles.normal} ${
         expanded ? styles.expanded : null
       }`}
     >
       <Row>
         <Col>
-          <div className={styles["geocoder-container"]} />
+          <div className={styles.geocoderContainer} />
         </Col>
       </Row>
       <Row>
@@ -164,7 +164,7 @@ function AppRow({ children }) {
 
 function IconButton({ icon: Icon, onClick }) {
   return (
-    <div onClick={onClick} className={styles["icon-button"]}>
+    <div onClick={onClick} className={styles.iconButton}>
       <Icon></Icon>
     </div>
   );
@@ -172,7 +172,7 @@ function IconButton({ icon: Icon, onClick }) {
 
 function TilesInfo() {
   return (
-    <Col className={styles["tiles-info"]} style={{ color: "white" }}>
+    <Col className={styles.tilesInfo} style={{ color: "white" }}>
       <div style={{ color: "white" }}>
         <div
           className="text-text-uppercase d-flex justify-content-between text-white"
@@ -202,7 +202,7 @@ function TilesInfo() {
         </div>
       </div>
       <div>
-        <div className={styles["tiles-info-card-top"]}>
+        <div className={styles.tilesInfoCardTop}>
           <div className="font-weight-bold d-flex align-items-center justify-content-between">
             <p className="m-0" style={{ fontSize: "1.5rem" }}>
               {" "}
@@ -210,7 +210,7 @@ function TilesInfo() {
             </p>
             <Bullseye />
           </div>
-          <div className={styles["area-geography-info"]}>
+          <div className={styles.areaGeographyInfo}>
             <div>
               <Building />
               <span>644</span>
@@ -324,7 +324,7 @@ function TilesInfo() {
           </AppRow>
         </div>
         <div
-          className={styles["tiles-info-card-bottom"]}
+          className={styles.tilesInfoCardBottom}
           style={{ background: "#240051" }}
         >
           <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -339,7 +339,7 @@ function TilesInfo() {
             <div className="p-0 col-3">0.1 USDT</div>
             <div className="p-0 col-3"></div>
           </div>
-          <div className={styles["tiles-selected-buttons"]}>
+          <div className={styles.tilesSelectedButtons}>
             <Button
               style={{
                 background:

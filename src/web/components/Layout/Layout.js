@@ -7,7 +7,7 @@ import styles from "./Layout.module.css";
 
 export default function Layout({ children, propsForMobileMenuSeclector = {} }) {
   return (
-    <div className={styles["main-container"]}>
+    <div className={styles.mainContainer}>
       <MenuSelector />
       <div
         style={{
@@ -16,12 +16,12 @@ export default function Layout({ children, propsForMobileMenuSeclector = {} }) {
       >
         <MenuSelectorMobile {...propsForMobileMenuSeclector} />
 
-        <div className={styles["map-container-big"]}>
-          <div id="main-map" className={styles["map"]} />
+        <div className={styles.mapContainerBig}>
+          <div id="main-map" className={styles.map} />
         </div>
         <MapProvider>
           <div className={styles["bars"]}>
-            <div style={{}} className={styles["content"]}>
+            <div style={{}} className={styles.content}>
               {children}
             </div>
           </div>

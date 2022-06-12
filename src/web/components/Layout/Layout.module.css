@@ -1,9 +1,9 @@
-.main-container {
+.mainContainer {
   display: flex;
   align-items: stretch;
   min-height: 100vh;
 }
-.map-container-big {
+.mapContainerBig {
   position: absolute;
   top: 0;
   bottom: 0;

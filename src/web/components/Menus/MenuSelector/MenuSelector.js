@@ -19,14 +19,12 @@ const MenuSelector = ({ settings }) => {
       value={{ showExandedMenu, activeElem, setActiveElem, setShowExpanedMenu }}
     >
       <Drawer onClose={() => setShowExpanedMenu(false)} open={showExandedMenu}>
-        <div
-          className={`expanded-menu open ${styles["expanded-sidebar-menu"]}`}
-        >
+        <div className={`expanded-menu open ${styles.expandedSidebarMenu}`}>
           <Menu setShowExpanedMenu={setShowExpanedMenu} expanded={true} />
         </div>
       </Drawer>
 
-      <div className={styles["menu-selector-desktop"]}>
+      <div className={styles.menuSelectorDesktop}>
         <Menu expanded={false} setShowExpanedMenu={setShowExpanedMenu} />
       </div>
     </ActiveElemContext.Provider>
@@ -39,14 +37,14 @@ export function Menu({ expanded, setShowExpanedMenu }) {
       value={{ ...useContext(ActiveElemContext), expanded }}
     >
       <Container
-        className={`${styles["sideBar"]} ${expanded ? styles["expanded"] : ""}`}
+        className={`${styles.sideBar} ${expanded ? styles.expanded : ""}`}
       >
         <div>
           <Row>
             <Col>
               <div
                 onClick={() => setShowExpanedMenu((e) => !e)}
-                className={styles["toggle-menu"]}
+                className={styles.toggleMenu}
               >
                 <LinkButton toggler icon={ArrowsAngleExpand}>
                   Toggle Menu
@@ -153,13 +151,9 @@ function LinkButton({ to, children, icon: Icon, toggler }) {
   return (
     <Link to={toggler ? "" : to ?? "/"}>
       <button
-        className={`${styles["link-button"]} ${
-          expanded ? styles["expanded"] : ""
-        }`}
+        className={`${styles.linkButton} ${expanded ? styles.expanded : ""}`}
       >
-        <div
-          className={`${styles["icon"]} ${isActive ? styles["active"] : ""}`}
-        >
+        <div className={`${styles.icon} ${isActive ? styles.active : ""}`}>
           {Icon && <Icon size={15}></Icon>}
         </div>
         {expanded && (

@@ -1,4 +1,4 @@
-.geocoder-container {
+.geocoderContainer {
   /* position: absolute; */
   z-index: 100;
   /* left: 50%; */
@@ -10,7 +10,7 @@
   min-width: 100%;
 }
 
-.menu-discover-container {
+.menuDiscoverContainer {
   background-color: rgba(36, 0, 81, 0.75);
   max-width: min(494px, 100vw);
   height: 100%;
@@ -18,7 +18,7 @@
   margin: 0;
   display: inline-block;
 }
-.icon-button {
+.iconButton {
   width: 24px;
   height: 25px;
   background: white;
@@ -28,32 +28,32 @@
   cursor: pointer;
   place-items: center;
 }
-.menu-discover-container > * {
+.menuDiscoverContainer > * {
   margin: 10px auto;
 }
 
-.area-geography-info {
+.areaGeographyInfo {
   gap: 10px;
   font-weight: bold d-flex;
   display: flex;
 }
-.area-geography-info > * {
+.areaGeographyInfo > * {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
 /* targets .cols inside .rows */
-.menu-discover-container > * > * {
+.menuDiscoverContainer > * > * {
   padding-left: 0px;
   padding-right: 0;
 }
 
-.menu-discover-container .text-secondary {
+.menuDiscoverContainer .text-secondary {
   color: #ab90f2 !important;
 }
 
-.tiles-info-card-top {
+.tilesInfoCardTop {
   background: linear-gradient(
       160.71deg,
       rgba(81, 238, 144, 0.2) 0.39%,
@@ -63,12 +63,12 @@
     #874be8;
 }
 
-.tiles-info-card-top,
-.tiles-info-card-bottom {
+.tilesInfoCardTop,
+.tilesInfoCardBottom {
   padding: 24px;
 }
 
-.tiles-selected-buttons {
+.tilesSelectedButtons {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -76,7 +76,7 @@
   margin-top: 20px;
 }
 
-.tiles-selected-buttons button:hover {
+.tilesSelectedButtons button:hover {
   opacity: 0.75;
 }
 

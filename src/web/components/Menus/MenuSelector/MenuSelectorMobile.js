@@ -12,7 +12,7 @@ import Drawer from "web/components/Drawer/Drawer";
 const MenuSelectorMobile = ({ settings }) => {
   const [showExpanedmenu, setShowExpanedMenu] = useState(false);
   return (
-    <div id="menu-selector-mobile" className={styles["menu-selector-mobile"]}>
+    <div id="menu-selector-mobile" className={styles.menuSelectorMobile}>
       <Menu settings={settings} setShowExpanedMenu={setShowExpanedMenu} />
       <Drawer onClose={() => setShowExpanedMenu(false)} open={showExpanedmenu}>
         <div style={{ background: "rgb(36, 0, 81)" }}>
