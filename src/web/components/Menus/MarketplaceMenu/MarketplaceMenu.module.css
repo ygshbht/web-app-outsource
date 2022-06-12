@@ -1,0 +1,65 @@
+.marketplaceMenuContainer {
+  width: 350px;
+  height: 100%;
+  z-index: 3;
+  margin: 0;
+  background-color: #7000ff;
+  position: relative;
+  z-index: 100;
+  padding-top: 20px;
+}
+
+.header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto;
+}
+
+.applyBtn {
+  background: radial-gradient(
+    100% 683.38% at 100% -1.52%,
+    #aa20eb 0%,
+    #ff6b00 100%
+  );
+  width: 100%;
+  margin-top: 20px;
+}
+
+.appAccordion {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  padding: 15px;
+  background: #6408d2;
+  color: white;
+}
+
+.appAccordionToggle {
+  border: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.appAccordionToggle:active,
+.appAccordionToggle:hover,
+.appAccordionToggle:focus {
+  background-color: transparent !important;
+}
+
+@media screen and (max-width: 650px) {
+  .marketplaceMenuContainer {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100vw;
+  }
+}

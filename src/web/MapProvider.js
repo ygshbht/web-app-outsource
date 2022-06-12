@@ -1,9 +1,9 @@
 import { createContext } from "react";
-import React, { useRef, useEffect, useState } from "react";
-import Legend from "web/components/Legend/Legend";
-import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
+import React, { useEffect, useState } from "react";
+// import Legend from "web/components/Legend/Legend";
+// import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
-import MapboxGLButtonControl from "web/components/MapboxGLButtonControl/MapboxGLButtonControl";
+// import MapboxGLButtonControl from "web/components/MapboxGLButtonControl/MapboxGLButtonControl";
 import mapboxgl from "web/MapboxGlWrapper";
 
 // TODO is it really an empty map context
@@ -66,6 +66,8 @@ const MapProvider = (props) => {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const value = { map, zoom, center };
-  return <MapContext.Provider value={value}>{props.children}</MapContext.Provider>;
+  return (
+    <MapContext.Provider value={value}>{props.children}</MapContext.Provider>
+  );
 };
 export default MapProvider;

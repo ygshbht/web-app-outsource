@@ -1,0 +1,103 @@
+:root {
+  --primary: rgb(112, 0, 255);
+  --primary-light: rgb(112, 0, 255, 0.7);
+  --purple: #240051;
+}
+
+.menuSelectorMobile {
+  position: sticky;
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+  z-index: 9999999999999;
+  width: 100%;
+}
+
+.menuSelectorDesktop {
+  z-index: 999999999;
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+
+.icon {
+  transition: 100ms;
+  border-radius: 100%;
+  display: inline-grid;
+  place-items: center;
+  width: 25;
+  height: 25;
+  flex-shrink: 0;
+}
+.icon.active {
+  background-color: var(--primary);
+}
+.toggleMenu .icon.active {
+  background-color: transparent;
+}
+
+.toggleMenu * {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+.linkButton {
+  text-align: start;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  gap: 15px;
+  margin: 7px auto;
+  justify-content: flex-start;
+}
+.linkButton.expanded {
+  margin: 7px 0;
+}
+.linkButton:hover .icon {
+  background-color: var(--primary-light);
+}
+
+.expandedSidebarMenu {
+  background-color: var(--purple);
+  position: relative;
+  z-index: 999999999999;
+  display: inline-block;
+  height: 100vh;
+  width: auto;
+}
+
+@media screen and (max-width: 850px) {
+  .menuSelectorDesktop {
+    display: none;
+  }
+  .menuSelectorMobile {
+    display: block;
+  }
+}
+@media screen and (min-width: 851px) {
+  .menuSelectorDesktop {
+    display: block;
+  }
+  .menuSelectorMobile {
+    display: none;
+  }
+}
+.sideBar {
+  /* width: min(300px, 95vw); */
+  background: #240051;
+  z-index: 55555;
+  overflow: visible;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 30px 0;
+  max-width: 90vw;
+  min-width: 48px;
+}
+
+.sideBar.expanded {
+  padding: 30px 50px 30px 0px;
+}
