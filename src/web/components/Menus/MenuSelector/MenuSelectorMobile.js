@@ -7,7 +7,7 @@ import { useLocation } from "@reach/router";
 import routes from "web/routeList";
 // import Drawer from "web/components/Drawer";
 
-import styles from "./MenuSelector.module.css";
+import styles from "./MenuSelector.module.scss";
 import Drawer from "web/components/Drawer/Drawer";
 const MenuSelectorMobile = ({ settings }) => {
   const [showExpanedmenu, setShowExpanedMenu] = useState(false);

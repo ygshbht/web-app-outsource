@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { MapContext } from "web/MapProvider";
-// import "./Legend.css";
-import styles from "./Legend.module.css";
+import styles from "./Legend.module.scss";
 // TODO moving to another location whould not show the previous owners
 const Legend = (props) => {
   const { map, zoom } = useContext(MapContext);

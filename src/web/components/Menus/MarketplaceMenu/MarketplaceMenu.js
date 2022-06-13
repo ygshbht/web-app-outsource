@@ -17,7 +17,7 @@ import {
   Building,
   ArrowsAngleContract,
 } from "react-bootstrap-icons";
-import styles from "./MarketplaceMenu.module.css";
+import styles from "./MarketplaceMenu.module.scss";
 const MenuDiscover = (_) => {
   const { map } = useContext(MapContext);
   const [showLandType, setShowLandType] = useState(false);

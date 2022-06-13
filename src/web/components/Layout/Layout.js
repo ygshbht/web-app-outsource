@@ -3,7 +3,7 @@ import MenuSelectorMobile from "web/components/Menus/MenuSelector/MenuSelectorMo
 import React from "react";
 import MapProvider from "web/MapProvider";
 
-import styles from "./Layout.module.css";
+import styles from "./Layout.module.scss";
 
 export default function Layout({ children, propsForMobileMenuSeclector = {} }) {
   return (

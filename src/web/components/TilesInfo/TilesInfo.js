@@ -1,7 +1,7 @@
 import React from "react";
 import { Tooltip, OverlayTrigger, Col, Button } from "react-bootstrap";
 // import "./MenuDiscover.css";
-import styles from "./TilesInfo.module.css";
+import styles from "./TilesInfo.module.scss";
 
 import {
   InfoCircle,

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { MapContext } from "web/MapProvider";
 import { Container, Row, Col, Card } from "react-bootstrap";
 // import "./TileInfo.css";
-import styles from "./TileInfo.module.css";
+import styles from "./TileInfo.module.scss";
 // TODO get the selected info via props
 const TileInfo = ({ selectedTile, show }) => {
   return show ? (

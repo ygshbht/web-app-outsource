@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { X } from "react-bootstrap-icons";
-import styles from "./Drawer.module.css";
+import styles from "./Drawer.module.scss";
 
 export default function Drawer({ open, children, onClose }) {
   const elemRef = useRef();

@@ -4,7 +4,7 @@ import mapboxgl from "web/MapboxGlWrapper";
 import { Container, Row, Col } from "react-bootstrap";
 import { MapContext } from "web/MapProvider";
 // import "./MenuDiscover.css";
-import styles from "./MenuDiscover.module.css";
+import styles from "./MenuDiscover.module.scss";
 
 import Form from "react-bootstrap/Form";
 import { ArrowBarLeft, Eye, Search, Bullseye } from "react-bootstrap-icons";

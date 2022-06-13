@@ -6,7 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "@reach/router";
 import { useLocation } from "@reach/router";
 import routes from "web/routeList";
-import styles from "./MenuSelector.module.css";
+import styles from "./MenuSelector.module.scss";
 import Drawer from "web/components/Drawer/Drawer";
 const ActiveElemContext = React.createContext(null);
 

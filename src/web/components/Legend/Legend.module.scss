@@ -8,16 +8,14 @@
   position: absolute;
   right: 10px;
   z-index: 1;
-}
-
-.legend h4 {
-  margin: 0 0 10px;
-}
-
-.legend div span {
-  border-radius: 50%;
-  display: inline-block;
-  height: 10px;
-  margin-right: 5px;
-  width: 10px;
+  h4 {
+    margin: 0 0 10px;
+  }
+  div span {
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px;
+  }
 }
