@@ -58,15 +58,9 @@ const MenuDiscover = (_) => {
   return (
     <Container className={styles.marketplaceMenuContainer}>
       <div className={styles.header}>
-        <div
-          style={{
-            display: "flex",
-            gap: "15px",
-            alignItems: "center",
-          }}
-        >
+        <div>
           <Hammer></Hammer>
-          <span style={{ textTransform: "uppercase" }}>Marketplace</span>
+          <span>Marketplace</span>
         </div>
         <span onClick={handleToggleCollapseClick} style={{ cursor: "pointer" }}>
           {showLandType || showCategories || showPrice || showPrice ? (
@@ -88,38 +82,28 @@ const MenuDiscover = (_) => {
         setOpen={setShowLandType}
         title={"Land Type"}
       >
-        <div className="d-flex justify-content-between">
-          <div className="d-flex align-items-between">
-            <Building></Building>
-            <span>Urban</span>
+        <div className={styles.landTypeSelector}>
+          <div>
+            <div>
+              <Building></Building>
+              <span>Urban</span>
+            </div>
+            <Form.Check type="checkbox"></Form.Check>
           </div>
-          <Form.Check type="checkbox"></Form.Check>
-        </div>
-        <div className="d-flex justify-content-between">
-          <div
-            style={{
-              display: "flex",
-              gap: 5,
-              alignItems: "center",
-            }}
-          >
-            <TriangleFill></TriangleFill>
-            <span>Non Urban</span>
+          <div>
+            <div>
+              <TriangleFill></TriangleFill>
+              <span>Non Urban</span>
+            </div>
+            <Form.Check type="checkbox"></Form.Check>
           </div>
-          <Form.Check type="checkbox"></Form.Check>
-        </div>
-        <div className="d-flex justify-content-between">
-          <div
-            style={{
-              display: "flex",
-              gap: 5,
-              alignItems: "center",
-            }}
-          >
-            <Water />
-            <span>Water</span>
+          <div>
+            <div>
+              <Water />
+              <span>Water</span>
+            </div>
+            <Form.Check type="checkbox"></Form.Check>
           </div>
-          <Form.Check type="checkbox"></Form.Check>
         </div>
       </AppAccordion>
       <AppAccordion
@@ -128,12 +112,7 @@ const MenuDiscover = (_) => {
         open={showTileCount}
         setOpen={setShowTileCount}
       >
-        <div
-          className="d-flex justify-content-between align-items-center "
-          style={{
-            gap: 5,
-          }}
-        >
+        <div className={styles.tileCountSelector}>
           <Form.Control placeholder="Min 01" type="number"></Form.Control>
           <span>to</span>
           <Form.Control placeholder="Max 1000" type="number"></Form.Control>
@@ -145,14 +124,7 @@ const MenuDiscover = (_) => {
         setOpen={setShowPrice}
         title="Price [Matic]"
       >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            gap: 5,
-            alignItems: "center",
-          }}
-        >
+        <div className={styles.priceMaticSelector}>
           <Form.Control placeholder="Min 0.1" type="number"></Form.Control>
           <span>to</span>
           <Form.Control placeholder="Max" type="number"></Form.Control>

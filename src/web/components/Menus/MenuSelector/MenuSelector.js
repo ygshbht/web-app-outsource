@@ -19,7 +19,7 @@ const MenuSelector = ({ settings }) => {
       value={{ showExandedMenu, activeElem, setActiveElem, setShowExpanedMenu }}
     >
       <Drawer onClose={() => setShowExpanedMenu(false)} open={showExandedMenu}>
-        <div className={`expanded-menu open ${styles.expandedSidebarMenu}`}>
+        <div className={`${styles.expandedSidebarMenu}`}>
           <Menu setShowExpanedMenu={setShowExpanedMenu} expanded={true} />
         </div>
       </Drawer>

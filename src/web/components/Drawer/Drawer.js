@@ -23,10 +23,7 @@ export default function Drawer({ open, children, onClose }) {
     <div ref={elemRef} className={styles.mainContainer}>
       <div ref={containerRef} className={styles.contentContainer}>
         {children}
-        <div
-          onClick={onClose}
-          style={{ alignSelf: "start", marginLeft: 10, cursor: "pointer" }}
-        >
+        <div onClick={onClose} className={styles.closeIconContainer}>
           <X color="white" size={30} />
         </div>
       </div>
