@@ -1,3 +1,4 @@
+@import "styles/_colors";
 .geocoderContainer {
   /* position: absolute; */
   z-index: 100;
@@ -15,10 +16,9 @@
 .latLongContainer > * {
   display: flex;
   gap: 5px;
-}
-
-.latLongContainer > * > label {
-  color: white;
+  label {
+    color: white;
+  }
 }
 
 /* tiles summary (not expanded) */
@@ -35,7 +35,7 @@
 }
 
 .menuDiscoverContainer {
-  background-color: rgba(36, 0, 81, 0.75);
+  background-color: rgba($dark, 0.5);
   max-width: min(494px, 100vw);
   height: 100%;
   width: auto;
@@ -54,17 +54,16 @@
 }
 .menuDiscoverContainer > * {
   margin: 10px auto;
+  /* targets .cols inside .rows */
+  & > * {
+    padding-left: 0px;
+    padding-right: 0;
+  }
+  .text-secondary {
+    color: #ab90f2 !important;
+  }
 }
 
-/* targets .cols inside .rows */
-.menuDiscoverContainer > * > * {
-  padding-left: 0px;
-  padding-right: 0;
-}
-
-.menuDiscoverContainer .text-secondary {
-  color: #ab90f2 !important;
-}
 @media screen and (max-width: 850px) {
   .menu-discover-container.expanded {
     padding: 14px;

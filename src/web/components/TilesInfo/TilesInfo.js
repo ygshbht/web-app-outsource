@@ -129,10 +129,7 @@ export default function TilesInfo() {
             </div>
           </AppRow>
         </div>
-        <div
-          className={styles.tilesInfoCardBottom}
-          style={{ background: "#240051" }}
-        >
+        <div className={styles.tilesInfoCardBottom}>
           <div className={styles.moreLandInfo}>
             <div>Current market value</div>
             <div>721.79 USDT</div>
@@ -144,30 +141,9 @@ export default function TilesInfo() {
             <div></div>
           </div>
           <div className={styles.tilesSelectedButtons}>
-            <Button
-              style={{
-                background:
-                  "linear-gradient(160.71deg,rgba(81,238,144,.2) .39%,rgba(17,17,17,0) 87.04%),radial-gradient(100% 100% at 100% 0%,#6100FF 0%,rgba(17,17,17,0) 100%),#874BE8",
-              }}
-            >
-              History
-            </Button>
-            <Button
-              style={{
-                background:
-                  "radial-gradient(100% 683.38% at 100% -1.52%,#AA20EB 0%,#FF6B00 100%)",
-              }}
-            >
-              Inspect
-            </Button>
-            <Button
-              style={{
-                background:
-                  "radial-gradient(100% 683.38% at 100% -1.52%,#AA20EB 0%,#FF6B00 100%)",
-              }}
-            >
-              Place an offer
-            </Button>
+            <Button>History</Button>
+            <Button>Inspect</Button>
+            <Button>Place an offer</Button>
           </div>
         </div>
       </div>

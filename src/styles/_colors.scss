@@ -1,0 +1,20 @@
+$primary: #7000ff;
+$primary-dark: #6408d2;
+$primary-light: rgb(112, 0, 255, 0.7);
+$dark: #240051;
+$primary-gradient: linear-gradient(
+    160.71deg,
+    rgba(81, 238, 144, 0.2) 0.39%,
+    rgba(17, 17, 17, 0) 87.04%
+  ),
+  radial-gradient(
+    100% 100% at 100% 0%,
+    rgb(97, 0, 255) 0%,
+    rgba(17, 17, 17, 0) 100%
+  ),
+  rgb(135, 75, 232);
+$secondary-gradient: radial-gradient(
+  100% 683.38% at 100% -1.52%,
+  #aa20eb 0%,
+  #ff6b00 100%
+);

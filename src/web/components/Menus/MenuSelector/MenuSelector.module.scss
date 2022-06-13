@@ -1,8 +1,4 @@
-:root {
-  --primary: rgb(112, 0, 255);
-  --primary-light: rgb(112, 0, 255, 0.7);
-  --purple: #240051;
-}
+@import "styles/_colors";
 
 .menuSelectorMobile {
   position: sticky;
@@ -27,10 +23,11 @@
   place-items: center;
   width: 25;
   height: 25;
+  padding: 5px;
   flex-shrink: 0;
 }
 .icon.active {
-  background-color: var(--primary);
+  background-color: $primary;
 }
 .toggleMenu .icon.active {
   background-color: transparent;
@@ -38,7 +35,7 @@
 
 .toggleMenu * {
   background-color: transparent;
-  color: var(--primary);
+  color: $primary;
 }
 
 .linkButton {
@@ -56,11 +53,11 @@
   margin: 7px 0;
 }
 .linkButton:hover .icon {
-  background-color: var(--primary-light);
+  background-color: $primary-light;
 }
 
 .expandedSidebarMenu {
-  background-color: var(--purple);
+  background-color: $dark;
   position: relative;
   z-index: 999999999999;
   display: inline-block;
@@ -86,7 +83,7 @@
 }
 .sideBar {
   /* width: min(300px, 95vw); */
-  background: #240051;
+  background: $dark;
   z-index: 55555;
   overflow: visible;
   display: flex;
@@ -100,4 +97,42 @@
 
 .sideBar.expanded {
   padding: 30px 50px 30px 0px;
+}
+
+.mobileMenuContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0;
+  max-width: 9999px;
+  padding: 0px;
+  height: 38px;
+  width: 100%;
+  background: $primary;
+  .toggleMenuButton {
+    width: 44px;
+    min-width: 44px;
+    height: 100%;
+    background: black;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+  }
+  .contentContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+    & > :first-child {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      padding: 0 15px;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
 }

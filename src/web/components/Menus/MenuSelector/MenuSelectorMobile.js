@@ -33,60 +33,17 @@ function Menu({ setShowExpanedMenu, settings: Settings }) {
   }
   const Icon = activeRoute.icon ?? <div></div>;
   return (
-    <Container
-      style={{
-        display: "flex",
-        // height: "100%",
-        justifyContent: "space-between",
-        flexDirection: "column",
-        margin: 0,
-        maxWidth: 9999,
-        padding: 0,
-        // paddingTop: "30px",
-        height: "38px",
-        width: "100%",
-        background: "rgb(112, 0, 255)",
-      }}
-    >
+    <Container className={styles.mobileMenuContainer}>
       <div style={{ height: "38px", width: "100%", display: "flex" }}>
-        <div
-          style={{
-            width: "44px",
-            minWidth: "44px",
-            height: "100%",
-            background: "black",
-            display: "grid",
-            placeItems: "center",
-            cursor: "pointer",
-          }}
-        >
+        <div className={styles.toggleMenuButton}>
           <List
             color="white"
             size={20}
             onClick={() => setShowExpanedMenu(true)}
           />
         </div>
-        <div
-          style={{
-            display: "flex",
-            width: "100%",
-            justifyContent: "space-between",
-            alignItems: "center",
-            paddingRight: "15px",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "start",
-              alignItems: "center",
-              gap: 10,
-              padding: "0 15px",
-              color: "white",
-              fontWeight: "bold",
-              textTransform: "uppercase",
-            }}
-          >
+        <div className={styles.contentContainer}>
+          <div>
             <Icon />
             <div>{activeRoute.name}</div>
           </div>

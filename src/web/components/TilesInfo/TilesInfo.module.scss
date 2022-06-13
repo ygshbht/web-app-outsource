@@ -1,4 +1,4 @@
-/* tiles summary (not expanded) */
+@import "styles/_colors"; /* tiles summary (not expanded) */
 .tilesSummaryCondensed {
   font-weight: bold;
   color: white;
@@ -21,47 +21,45 @@
   display: flex;
   font-weight: bold;
   align-items: center;
-}
-.totalValue > :first-child {
-  font-size: 1.5rem;
-}
-.totalValue > :first-child > .gradientText {
-  background: radial-gradient(
-    100% 683.38% at 100% -1.52%,
-    #aa20eb 0%,
-    #ff6b00 100%
-  );
-  color: transparent;
-  background-clip: text;
+  & > :first-child {
+    font-size: 1.5rem;
+    & > .gradientText {
+      background: radial-gradient(
+        100% 683.38% at 100% -1.52%,
+        #aa20eb 0%,
+        #ff6b00 100%
+      );
+      color: transparent;
+      background-clip: text;
+    }
+  }
 }
 
 .areaGeographyInfo {
   gap: 10px;
   font-weight: bold d-flex;
   display: flex;
-}
-.areaGeographyInfo > * {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  & > * {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
 }
 
 .tilesInfo {
   color: white;
-}
-
-/*  first row that shows number of tiles selected */
-.tilesInfo > :first-child {
-  color: white;
-  margin: 15px 0;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
-}
-
-.tilesInfo > :first-child a {
-  color: white;
-  text-decoration: underline;
+  /*  first row that shows number of tiles selected */
+  & > :first-child {
+    color: white;
+    margin: 15px 0;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
 }
 
 .tilesInfoCardTop {
@@ -72,19 +70,22 @@
     ),
     radial-gradient(100% 100% at 100% 0%, #6100ff 0%, rgba(17, 17, 17, 0) 100%),
     #874be8;
+
+  /* top row */
+  & > :first-child {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+  }
 }
 
-/* top row */
-.tilesInfoCardTop > :first-child {
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.tilesInfoCardTop > :first-child p {
-  margin: 0;
-  font-size: 1.5rem;
+.tilesInfoCardBottom {
+  background: $dark;
 }
 
 .tilesInfoCardTop,
@@ -96,36 +97,36 @@
   display: flex;
   align-items: center;
   text-transform: uppercase;
-}
-.landArtCompatibility .compatibilityStatus {
-  color: orange;
-  border: 1px solid orange;
-  padding: 2px 5px;
-  font-size: 0.8rem;
+  .compatibilityStatus {
+    color: orange;
+    border: 1px solid orange;
+    padding: 2px 5px;
+    font-size: 0.8rem;
+  }
 }
 
 .dataRow {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-}
 
-/* icon's container */
-.dataRowIcon {
-  display: flex;
-  justify-content: center;
-  padding-top: 4px;
-  min-width: 7%;
+  /* icon's container */
+  .dataRowIcon {
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+    min-width: 7%;
+  }
 }
 
 .subDataRow {
   display: flex;
-}
-.subDataRow > :first-child {
-  display: flex;
-  color: lightgray;
-  padding: 0;
-  width: 33%;
+  & > :first-child {
+    display: flex;
+    color: lightgray;
+    padding: 0;
+    width: 33%;
+  }
 }
 
 @media (max-width: 650px) {
@@ -140,18 +141,22 @@
   align-items: stretch;
   gap: 10px;
   margin-top: 20px;
-}
-
-.tilesSelectedButtons button:hover {
-  opacity: 0.75;
+  button:hover {
+    opacity: 0.75;
+  }
+  & > :first-child {
+    background: $primary-gradient;
+  }
+  & > :nth-child(2) {
+    background: $secondary-gradient;
+  }
+  & > :nth-child(3) {
+    background: $secondary-gradient;
+  }
 }
 
 .text-primary {
-  background: radial-gradient(
-    100% 683.38% at 100% -1.52%,
-    #aa20eb 0%,
-    #ff6b00 100%
-  );
+  background: $secondary-gradient;
   color: transparent !important;
   background-clip: text;
   -webkit-background-clip: text !important;
@@ -177,12 +182,12 @@
 .moreLandInfo {
   display: flex;
   justify-content: space-between;
-}
-.moreLandInfo > :first-child {
-  color: lightgray;
-  width: 50%;
-}
-.moreLandInfo > :nth-child(2),
-.moreLandInfo > :last-child {
-  width: 25%;
+  & > :first-child {
+    color: lightgray;
+    width: 50%;
+  }
+  & > :nth-child(2),
+  & > :last-child {
+    width: 25%;
+  }
 }
