@@ -1,0 +1,188 @@
+/* tiles summary (not expanded) */
+.tilesSummaryCondensed {
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 10px;
+  writing-mode: vertical-rl;
+}
+.iconButton {
+  width: 24px;
+  height: 25px;
+  background: white;
+  border-radius: 5px;
+  display: grid;
+  padding: 0;
+  cursor: pointer;
+  place-items: center;
+}
+
+.totalValue {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+}
+.totalValue > :first-child {
+  font-size: 1.5rem;
+}
+.totalValue > :first-child > .gradientText {
+  background: radial-gradient(
+    100% 683.38% at 100% -1.52%,
+    #aa20eb 0%,
+    #ff6b00 100%
+  );
+  color: transparent;
+  background-clip: text;
+}
+
+.areaGeographyInfo {
+  gap: 10px;
+  font-weight: bold d-flex;
+  display: flex;
+}
+.areaGeographyInfo > * {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tilesInfo {
+  color: white;
+}
+
+/*  first row that shows number of tiles selected */
+.tilesInfo > :first-child {
+  color: white;
+  margin: 15px 0;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tilesInfo > :first-child a {
+  color: white;
+  text-decoration: underline;
+}
+
+.tilesInfoCardTop {
+  background: linear-gradient(
+      160.71deg,
+      rgba(81, 238, 144, 0.2) 0.39%,
+      rgba(17, 17, 17, 0) 87.04%
+    ),
+    radial-gradient(100% 100% at 100% 0%, #6100ff 0%, rgba(17, 17, 17, 0) 100%),
+    #874be8;
+}
+
+/* top row */
+.tilesInfoCardTop > :first-child {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tilesInfoCardTop > :first-child p {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.tilesInfoCardTop,
+.tilesInfoCardBottom {
+  padding: 24px;
+}
+
+.landArtCompatibility {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+.landArtCompatibility .compatibilityStatus {
+  color: orange;
+  border: 1px solid orange;
+  padding: 2px 5px;
+  font-size: 0.8rem;
+}
+
+.dataRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* icon's container */
+.dataRowIcon {
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+  min-width: 7%;
+}
+
+.subDataRow {
+  display: flex;
+}
+.subDataRow > :first-child {
+  display: flex;
+  color: lightgray;
+  padding: 0;
+  width: 33%;
+}
+
+@media (max-width: 650px) {
+  .subDataRow > :first-child {
+    width: 50%;
+  }
+}
+
+.tilesSelectedButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tilesSelectedButtons button:hover {
+  opacity: 0.75;
+}
+
+.text-primary {
+  background: radial-gradient(
+    100% 683.38% at 100% -1.52%,
+    #aa20eb 0%,
+    #ff6b00 100%
+  );
+  color: transparent !important;
+  background-clip: text;
+  -webkit-background-clip: text !important;
+}
+
+@media screen and (max-width: 850px) {
+  .menu-discover-container.expanded {
+    padding: 14px;
+  }
+  .tiles-info-card-top,
+  .tiles-info-card-bottom {
+    padding: 8px;
+  }
+}
+
+.normal {
+  padding: 8px;
+}
+.expanded {
+  padding: 24px;
+}
+
+.moreLandInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.moreLandInfo > :first-child {
+  color: lightgray;
+  width: 50%;
+}
+.moreLandInfo > :nth-child(2),
+.moreLandInfo > :last-child {
+  width: 25%;
+}
